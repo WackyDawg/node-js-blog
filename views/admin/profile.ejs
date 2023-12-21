@@ -1,17 +1,19 @@
 <main id="archives" class="main"> <!-- start: .content-wrapper -->
     <div class="content-wrapper ">
+        <% if (user) { %>
         <div class="grid-container"> <!-- start: .author -->
             <section id="author" class="author section bg-box  with-avatar grid-container grid-medium">
                 <div class="single-wrapper">
+                    
                     <div class="flex"> <a href="https://themes.estudiopatagon.com/wordpress/groovy/author/admin/"
                             class="author-avatar shadow-effect epcl-loader loaded"> <span
-                                class="screen-reader-text">Jonathan Doe</span> <span
+                                class="screen-reader-text"><%= user.username %></span> <span
                                 class="author-image cover lazy loaded"
                                 style="background-image: url(&quot;https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2023/01/avatar-1.jpg&quot;);"></span>
                         </a>
                         <div class="right">
-                            <h4 class="title author-name underline-effect"> Jonathan Doe</h4>
-                            <p class="position">Founder &amp; Editor</p>
+                            <h4 class="title author-name underline-effect"> <%= user.username %></h4>
+                            <p class="position">position</p>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -31,13 +33,289 @@
                 </div>
             </section> <!-- end: .author -->
             <div class="clear"></div>
-        </div> <!-- start: .grid-container -->
+        </div>
+        <% } else { %>
+            <p>Welcome to our site! Please log in to access additional content.</p>
+        <% } %>
+        <!-- start: .grid-container -->
         <div class="grid-container">
             <div class="row module-wrapper "> <!-- start: .content-wrapper -->
                 <div class="content-wrapper classic classic-sidebar " id="epcl-classic-sidebar-1">
                     <!-- start: .center -->
                     <div class="center left-content grid-70"> <!-- start: .articles -->
                         <div class="articles classic">
+                            <article
+                                class="epcl-flex bg-box default classic-large grid-100 tablet-grid-100 index-0 post-style-small-image odd primary-cat-6 post-829 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle category-travel">
+                                <div class="post-format-wrapper"> <!-- start: .post-format-image -->
+                                    <div class="post-format-image post-style-small-image">
+                                        <!-- start: .featured-image -->
+                                        <div class="featured-image epcl-flex"> <!-- start: Classic module -->
+                                            <!-- Loop: Small/Vertical Image Style --> <a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/the-spectacle-before-us-was-indeed-sublime/"
+                                                class="thumb main-effect medium-shadow epcl-loader loaded"> <img
+                                                    class="post-image fullimage" decoding="sync"
+                                                    alt="The spectacle before us was indeed sublime"
+                                                    src="https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2019/09/light-bulb-creative-business-idea-symbol-held-by-hand_53876-127176-1-7-450x500.webp">
+                                            </a> <!-- Loop: Classic Image Style -->
+                                            <div class="meta absolute"> <a
+                                                    href="https://themes.estudiopatagon.com/wordpress/groovy/the-spectacle-before-us-was-indeed-sublime/#show-comments"
+                                                    class="comments meta-info icon mobile tooltip tooltipstered"
+                                                    aria-label="3 Comments"> <svg>
+                                                        <use xlink:href="#comments-icon"></use>
+                                                    </svg> <span class="comment-count hidden">3</span> </a></div>
+                                            <!-- end: Classic module --> <!-- start: Grid module -->
+                                            <!-- end: Grid module -->
+                                        </div> <!-- end: .featured-image -->
+                                        <div class="clear"></div>
+                                    </div> <!-- end: .post-format-image -->
+                                </div>
+                                <div class="info">
+                                    <header> <!-- start: .meta -->
+                                        <div class="meta-wrapper epcl-flex">
+                                            <div class="tags"> <a
+                                                    href="https://themes.estudiopatagon.com/wordpress/groovy/category/travel/"
+                                                    class="tag-link-6"><svg>
+                                                        <use xlink:href="#tag-decoration"></use>
+                                                    </svg>Travel</a></div> <!-- start: .meta -->
+                                            <div class="meta"> <time class="meta-info" datetime="2019-09-26">September
+                                                    26, 2019</time>
+                                                <!--<div class="min-read meta-info hide-on-desktop-sm"><span class="count">1</span> Min Read</div> -->
+                                                <div class="min-read meta-info hide-on-desktop-sm">1 Min Read</div>
+                                                <div class="clear"></div>
+                                            </div> <!-- end: .meta -->
+                                            <div class="clear"></div>
+                                        </div> <!-- end: .meta -->
+                                        <h1 class="main-title title large underline-effect"><a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/the-spectacle-before-us-was-indeed-sublime/">The
+                                                spectacle before us was indeed sublime</a></h1>
+                                    </header>
+                                    <div class="post-excerpt">
+                                        <p>Welcome, it’s great to have you here. We know that first impressions are
+                                            important, so we’ve populated your new site with some initial&nbsp;getting
+                                            started&nbsp;posts that will help you get familiar…</p>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <footer class="bottom">
+                                        <div class="meta bottom"> <a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/the-spectacle-before-us-was-indeed-sublime/"
+                                                class="continue-reading epcl-button white active">Continue Reading <svg>
+                                                    <use xlink:href="#right-arrow"></use>
+                                                </svg></a> <a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/author/admin/"
+                                                title="Author: Jonathan Doe"
+                                                class="author meta-info hide-on-mobile hide-on-tablet hide-on-desktop-sm loaded">
+                                                <span class="author-image cover lazy loaded"
+                                                    style="background-image: url(&quot;https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2023/01/avatar-1.jpg&quot;);"></span>
+                                                <span class="author-name">Jonathan Doe</span> </a></div>
+                                    </footer>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="epcl-category-overlay"></div>
+                            </article>
+                            <article
+                                class="epcl-flex bg-box default classic-large grid-100 tablet-grid-100 index-1 post-style-small-image even primary-cat-3 post-76 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle category-music category-technology tag-country tag-image">
+                                <div class="post-format-wrapper"> <!-- start: .post-format-image -->
+                                    <div class="post-format-image post-style-small-image">
+                                        <!-- start: .featured-image -->
+                                        <div class="featured-image epcl-flex"> <!-- start: Classic module -->
+                                            <!-- Loop: Small/Vertical Image Style --> <a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/far-far-away-behind-the-word-mountains/"
+                                                class="thumb main-effect medium-shadow epcl-loader  epcl-loader"> <img
+                                                    class="post-image fullimage" loading="lazy" decoding="async"
+                                                    alt="Far far away, behind the word mountains"
+                                                    src="https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2019/08/job252-nook-28-450x500.webp"
+                                                    width="300" height="380"> </a> <!-- Loop: Classic Image Style -->
+                                            <div class="meta absolute"> <a
+                                                    href="https://themes.estudiopatagon.com/wordpress/groovy/far-far-away-behind-the-word-mountains/#show-comments"
+                                                    class="comments meta-info icon mobile tooltip tooltipstered"
+                                                    aria-label="0 Comments"> <svg>
+                                                        <use xlink:href="#comments-icon"></use>
+                                                    </svg> <span class="comment-count hidden">0</span> </a></div>
+                                            <!-- end: Classic module --> <!-- start: Grid module -->
+                                            <!-- end: Grid module -->
+                                        </div> <!-- end: .featured-image -->
+                                        <div class="clear"></div>
+                                    </div> <!-- end: .post-format-image -->
+                                </div>
+                                <div class="info">
+                                    <header> <!-- start: .meta -->
+                                        <div class="meta-wrapper epcl-flex">
+                                            <div class="tags"> <a
+                                                    href="https://themes.estudiopatagon.com/wordpress/groovy/category/lifestyle/"
+                                                    class="tag-link-3"><svg>
+                                                        <use xlink:href="#tag-decoration"></use>
+                                                    </svg>Lifestyle</a></div> <!-- start: .meta -->
+                                            <div class="meta"> <time class="meta-info" datetime="2019-08-15">August 15,
+                                                    2019</time>
+                                                <!--<div class="min-read meta-info hide-on-desktop-sm"><span class="count">2</span> Min Read</div> -->
+                                                <div class="min-read meta-info hide-on-desktop-sm">2 Min Read</div>
+                                                <div class="clear"></div>
+                                            </div> <!-- end: .meta -->
+                                            <div class="clear"></div>
+                                        </div> <!-- end: .meta -->
+                                        <h1 class="main-title title large underline-effect"><a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/far-far-away-behind-the-word-mountains/">Far
+                                                far away, behind the word mountains</a></h1>
+                                    </header>
+                                    <div class="post-excerpt">
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                            Consonantia, there live the blind texts. Separated they live in
+                                            Bookmarksgrove right at the coast of the…</p>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <footer class="bottom">
+                                        <div class="meta bottom"> <a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/far-far-away-behind-the-word-mountains/"
+                                                class="continue-reading epcl-button white active">Continue Reading <svg>
+                                                    <use xlink:href="#right-arrow"></use>
+                                                </svg></a> <a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/author/admin/"
+                                                title="Author: Jonathan Doe"
+                                                class="author meta-info hide-on-mobile hide-on-tablet hide-on-desktop-sm loaded">
+                                                <span class="author-image cover lazy loaded"
+                                                    style="background-image: url(&quot;https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2023/01/avatar-1.jpg&quot;);"></span>
+                                                <span class="author-name">Jonathan Doe</span> </a></div>
+                                    </footer>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="epcl-category-overlay"></div>
+                            </article>
+                            <article
+                                class="epcl-flex bg-box default classic-large grid-100 tablet-grid-100 index-2 post-style-small-image odd primary-cat-2 post-144 post type-post status-publish format-standard has-post-thumbnail hentry category-health category-travel">
+                                <div class="post-format-wrapper"> <!-- start: .post-format-image -->
+                                    <div class="post-format-image post-style-small-image">
+                                        <!-- start: .featured-image -->
+                                        <div class="featured-image epcl-flex"> <!-- start: Classic module -->
+                                            <!-- Loop: Small/Vertical Image Style --> <a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/the-meaning-of-health-has-evolved-over-time/"
+                                                class="thumb main-effect medium-shadow epcl-loader  epcl-loader"> <img
+                                                    class="post-image fullimage" loading="lazy" decoding="async"
+                                                    alt="The meaning of health has evolved over time"
+                                                    src="https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2019/07/various-types-pumpkins-arranged-height-food-gravity-concept-autumn-halloween-theme_492182-203-1-450x500.webp"
+                                                    width="300" height="380"> </a> <!-- Loop: Classic Image Style -->
+                                            <div class="meta absolute"> <a
+                                                    href="https://themes.estudiopatagon.com/wordpress/groovy/the-meaning-of-health-has-evolved-over-time/#show-comments"
+                                                    class="comments meta-info icon mobile tooltip tooltipstered"
+                                                    aria-label="0 Comments"> <svg>
+                                                        <use xlink:href="#comments-icon"></use>
+                                                    </svg> <span class="comment-count hidden">0</span> </a></div>
+                                            <!-- end: Classic module --> <!-- start: Grid module -->
+                                            <!-- end: Grid module -->
+                                        </div> <!-- end: .featured-image -->
+                                        <div class="clear"></div>
+                                    </div> <!-- end: .post-format-image -->
+                                </div>
+                                <div class="info">
+                                    <header> <!-- start: .meta -->
+                                        <div class="meta-wrapper epcl-flex">
+                                            <div class="tags"> <a
+                                                    href="https://themes.estudiopatagon.com/wordpress/groovy/category/health/"
+                                                    class="tag-link-2"><svg>
+                                                        <use xlink:href="#tag-decoration"></use>
+                                                    </svg>Health</a></div> <!-- start: .meta -->
+                                            <div class="meta"> <time class="meta-info" datetime="2019-07-26">July 26,
+                                                    2019</time>
+                                                <!--<div class="min-read meta-info hide-on-desktop-sm"><span class="count">1</span> Min Read</div> -->
+                                                <div class="min-read meta-info hide-on-desktop-sm">1 Min Read</div>
+                                                <div class="clear"></div>
+                                            </div> <!-- end: .meta -->
+                                            <div class="clear"></div>
+                                        </div> <!-- end: .meta -->
+                                        <h1 class="main-title title large underline-effect"><a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/the-meaning-of-health-has-evolved-over-time/">The
+                                                meaning of health has evolved over time</a></h1>
+                                    </header>
+                                    <div class="post-excerpt">
+                                        <p>In keeping with the biomedical perspective, early definitions of health
+                                            focused on the theme of the body’s ability to function; health was seen as a
+                                            state of normal function that…</p>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <footer class="bottom">
+                                        <div class="meta bottom"> <a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/the-meaning-of-health-has-evolved-over-time/"
+                                                class="continue-reading epcl-button white active">Continue Reading <svg>
+                                                    <use xlink:href="#right-arrow"></use>
+                                                </svg></a> <a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/author/admin/"
+                                                title="Author: Jonathan Doe"
+                                                class="author meta-info hide-on-mobile hide-on-tablet hide-on-desktop-sm loaded">
+                                                <span class="author-image cover lazy loaded"
+                                                    style="background-image: url(&quot;https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2023/01/avatar-1.jpg&quot;);"></span>
+                                                <span class="author-name">Jonathan Doe</span> </a></div>
+                                    </footer>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="epcl-category-overlay"></div>
+                            </article>
+                            <article
+                                class="epcl-flex bg-box default classic-large grid-100 tablet-grid-100 index-3 post-style-small-image even primary-cat-4 post-185 post type-post status-publish format-standard has-post-thumbnail hentry category-music category-technology">
+                                <div class="post-format-wrapper"> <!-- start: .post-format-image -->
+                                    <div class="post-format-image post-style-small-image">
+                                        <!-- start: .featured-image -->
+                                        <div class="featured-image epcl-flex"> <!-- start: Classic module -->
+                                            <!-- Loop: Small/Vertical Image Style --> <a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/musical-improvisation-is-the-creation-of-spontaneous-music/"
+                                                class="thumb main-effect medium-shadow epcl-loader  epcl-loader"> <img
+                                                    class="post-image fullimage" loading="lazy" decoding="async"
+                                                    alt="Musical improvisation is the spontaneous music"
+                                                    src="https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2019/07/radio-concept-with-cassette-yellow-background_23-2148681171-450x500.jpg"
+                                                    width="300" height="380"> </a> <!-- Loop: Classic Image Style -->
+                                            <div class="meta absolute"> <a
+                                                    href="https://themes.estudiopatagon.com/wordpress/groovy/musical-improvisation-is-the-creation-of-spontaneous-music/#show-comments"
+                                                    class="comments meta-info icon mobile tooltip tooltipstered"
+                                                    aria-label="0 Comments"> <svg>
+                                                        <use xlink:href="#comments-icon"></use>
+                                                    </svg> <span class="comment-count hidden">0</span> </a></div>
+                                            <!-- end: Classic module --> <!-- start: Grid module -->
+                                            <!-- end: Grid module -->
+                                        </div> <!-- end: .featured-image -->
+                                        <div class="clear"></div>
+                                    </div> <!-- end: .post-format-image -->
+                                </div>
+                                <div class="info">
+                                    <header> <!-- start: .meta -->
+                                        <div class="meta-wrapper epcl-flex">
+                                            <div class="tags"> <a
+                                                    href="https://themes.estudiopatagon.com/wordpress/groovy/category/music/"
+                                                    class="tag-link-4"><svg>
+                                                        <use xlink:href="#tag-decoration"></use>
+                                                    </svg>Music</a></div> <!-- start: .meta -->
+                                            <div class="meta"> <time class="meta-info" datetime="2019-07-25">July 25,
+                                                    2019</time>
+                                                <!--<div class="min-read meta-info hide-on-desktop-sm"><span class="count">1</span> Min Read</div> -->
+                                                <div class="min-read meta-info hide-on-desktop-sm">1 Min Read</div>
+                                                <div class="clear"></div>
+                                            </div> <!-- end: .meta -->
+                                            <div class="clear"></div>
+                                        </div> <!-- end: .meta -->
+                                        <h1 class="main-title title large underline-effect"><a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/musical-improvisation-is-the-creation-of-spontaneous-music/">Musical
+                                                improvisation is the spontaneous music</a></h1>
+                                    </header>
+                                    <div class="post-excerpt">
+                                        <p>It was one of the worst storms to hit London since God knows when. The
+                                            thunder rolled, lightning flashed and the rain hammered into the roof.
+                                            There’s something about a…</p>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <footer class="bottom">
+                                        <div class="meta bottom"> <a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/musical-improvisation-is-the-creation-of-spontaneous-music/"
+                                                class="continue-reading epcl-button white active">Continue Reading <svg>
+                                                    <use xlink:href="#right-arrow"></use>
+                                                </svg></a> <a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/author/admin/"
+                                                title="Author: Jonathan Doe"
+                                                class="author meta-info hide-on-mobile hide-on-tablet hide-on-desktop-sm loaded">
+                                                <span class="author-image cover lazy loaded"
+                                                    style="background-image: url(&quot;https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2023/01/avatar-1.jpg&quot;);"></span>
+                                                <span class="author-name">Jonathan Doe</span> </a></div>
+                                    </footer>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="epcl-category-overlay"></div>
+                            </article>
                             <article
                                 class="epcl-flex bg-box default classic-large grid-100 tablet-grid-100 index-4 post-style-classic-image odd primary-cat-4 post-89 post type-post status-publish format-gallery has-post-thumbnail hentry category-travel post_format-post-format-gallery">
                                 <div class="post-format-wrapper">
@@ -152,11 +430,153 @@
                                     class="epcl-button secondary small" data-title="Next">Next</a></div>
                         </div> <!-- end: .epcl-pagination -->
                     </div> <!-- end: .center --> <!-- start: #sidebar -->
-                    <%- include('../partials/aside.ejs') %>
-                    <!-- end: #sidebar -->
+                    <aside id="sidebar" class="grid-30 no-sidebar sticky-enabled">
+                        <div class="sidebar-wrapper default-sidebar">
+                            <section id="epcl_about-6" class="widget bg-box widget_epcl_about">
+                                <h4 class="widget-title title medium bordered"><span class="bg">About Me</span><span
+                                        class="border"></span></h4>
+                                <div class="avatar"> <a
+                                        href="https://themes.estudiopatagon.com/wordpress/groovy/author/admin/"
+                                        class="shadow-effect thumb"><span class="fullimage cover"
+                                            style="background-image: url(https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2023/01/avatar-1.jpg)"></span><span
+                                            class="screen-reader-text">Jonathan Doe</span></a></div>
+                                <div class="info">
+                                    <h4 class="title small underline-effect author-name no-margin"><a
+                                            href="https://themes.estudiopatagon.com/wordpress/groovy/author/admin/">Jonathan
+                                            Doe</a></h4>
+                                    <p class="founder">Founder &amp; Editor</p>
+                                    <div class="social"> <a href="https://twitter.com/wordpress"
+                                            class="twitter tooltip tooltipstered" target="_blank"><i
+                                                class="fa fa-twitter"></i><span class="screen-reader-text">Follow me on
+                                                Twitter</span></a> <a href="http://www.facebook.com/estudiopatagon"
+                                            class="facebook tooltip tooltipstered" target="_blank"><i
+                                                class="fa fa-facebook"></i><span class="screen-reader-text">Follow me on
+                                                Facebook</span></a> <a
+                                            href="https://themes.estudiopatagon.com/wordpress/groovy"
+                                            class="website tooltip tooltipstered" target="_blank"><i
+                                                class="fa fa-globe"></i><span
+                                                class="screen-reader-text">Website</span></a></div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+                                <p>Hello! My name is Jonathan Doe working from Chile. I create some Ghost and Wordpress
+                                    themes for differents markets, also, i offer live support via our ticket system.</p>
+                                <div class="clear"></div>
+                            </section>
+                            <section id="epcl_posts_thumbs-5" class="widget bg-box widget_epcl_posts_thumbs">
+                                <h4 class="widget-title title medium bordered"><span class="bg">Recent Posts</span><span
+                                        class="border"></span></h4>
+                                <article
+                                    class="item primary-cat-6 post-829 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle category-travel">
+                                    <a href="https://themes.estudiopatagon.com/wordpress/groovy/the-spectacle-before-us-was-indeed-sublime/"
+                                        class="thumb main-effect epcl-loader loaded"> <span
+                                            class="screen-reader-text">The spectacle before us was indeed sublime</span>
+                                        <span class="fullimage cover lazy loaded"
+                                            style="background-image: url(&quot;https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2019/09/light-bulb-creative-business-idea-symbol-held-by-hand_53876-127176-1-7-150x150.webp&quot;);"></span>
+                                        <span class="epcl-number">1</span> </a>
+                                    <div class="info">
+                                        <div class="right">
+                                            <h4 class="title usmall underline-effect"><a
+                                                    href="https://themes.estudiopatagon.com/wordpress/groovy/the-spectacle-before-us-was-indeed-sublime/">The
+                                                    spectacle before us was indeed sublime</a></h4> <time
+                                                datetime="2019-09-26" class="icon">September 26, 2019</time>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </article>
+                                <article
+                                    class="item primary-cat-3 post-76 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle category-music category-technology tag-country tag-image">
+                                    <a href="https://themes.estudiopatagon.com/wordpress/groovy/far-far-away-behind-the-word-mountains/"
+                                        class="thumb main-effect epcl-loader loaded"> <span
+                                            class="screen-reader-text">Far far away, behind the word mountains</span>
+                                        <span class="fullimage cover lazy loaded"
+                                            style="background-image: url(&quot;https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2019/08/job252-nook-28-150x150.webp&quot;);"></span>
+                                        <span class="epcl-number">2</span> </a>
+                                    <div class="info">
+                                        <div class="right">
+                                            <h4 class="title usmall underline-effect"><a
+                                                    href="https://themes.estudiopatagon.com/wordpress/groovy/far-far-away-behind-the-word-mountains/">Far
+                                                    far away, behind the word mountains</a></h4> <time
+                                                datetime="2019-08-15" class="icon">August 15, 2019</time>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </article>
+                                <article
+                                    class="item primary-cat-4 post-185 post type-post status-publish format-standard has-post-thumbnail hentry category-music category-technology">
+                                    <a href="https://themes.estudiopatagon.com/wordpress/groovy/musical-improvisation-is-the-creation-of-spontaneous-music/"
+                                        class="thumb main-effect epcl-loader loaded"> <span
+                                            class="screen-reader-text">Musical improvisation is the spontaneous
+                                            music</span> <span class="fullimage cover lazy loaded"
+                                            style="background-image: url(&quot;https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2019/07/radio-concept-with-cassette-yellow-background_23-2148681171-150x150.jpg&quot;);"></span>
+                                        <span class="epcl-number">3</span> </a>
+                                    <div class="info">
+                                        <div class="right">
+                                            <h4 class="title usmall underline-effect"><a
+                                                    href="https://themes.estudiopatagon.com/wordpress/groovy/musical-improvisation-is-the-creation-of-spontaneous-music/">Musical
+                                                    improvisation is the spontaneous music</a></h4> <time
+                                                datetime="2019-07-25" class="icon">July 25, 2019</time>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </article>
+                                <div class="clear"></div>
+                            </section>
+                            <section id="epcl_social-9" class="widget bg-box widget_epcl_social">
+                                <h4 class="widget-title title medium bordered"><span class="bg">Follow me!</span><span
+                                        class="border"></span></h4>
+                                <div class="icons"><a href="#" class="twitter" target="_blank"
+                                        rel="nofollow noopener"><span class="icon twitter"><i
+                                                class="fa fa-twitter"></i></span> <span
+                                            class="name">Twitter</span></a><a href="#" class="facebook" target="_blank"
+                                        rel="nofollow noopener"><span class="icon facebook"><i
+                                                class="fa fa-facebook"></i></span> <span
+                                            class="name">Facebook</span></a><a href="#" class="instagram"
+                                        target="_blank" rel="nofollow noopener"><span class="icon instagram"><i
+                                                class="fa fa-instagram"></i></span> <span
+                                            class="name">Instagram</span></a><a href="http://estudiopatagon.com/feed"
+                                        class="rss" target="_blank" rel="nofollow noopener"><span class="icon rss"><i
+                                                class="fa fa-rss"></i></span> <span class="name">Rss</span></a></div>
+                                <div class="clear"></div>
+                            </section>
+                            <section id="epcl_tag_cloud-5" class="widget bg-box widget_epcl_tag_cloud">
+                                <h4 class="widget-title title medium bordered"><span class="bg">Tag Cloud</span><span
+                                        class="border"></span></h4>
+                                <div class="tagcloud "><a
+                                        href="https://themes.estudiopatagon.com/wordpress/groovy/category/health/"
+                                        class="tag-link-2 tag-cloud-link"><svg>
+                                            <use xlink:href="#tag-decoration"></use>
+                                        </svg>Health</a><a
+                                        href="https://themes.estudiopatagon.com/wordpress/groovy/category/lifestyle/"
+                                        class="tag-link-3 tag-cloud-link"><svg>
+                                            <use xlink:href="#tag-decoration"></use>
+                                        </svg>Lifestyle</a><a
+                                        href="https://themes.estudiopatagon.com/wordpress/groovy/category/music/"
+                                        class="tag-link-4 tag-cloud-link"><svg>
+                                            <use xlink:href="#tag-decoration"></use>
+                                        </svg>Music</a><a
+                                        href="https://themes.estudiopatagon.com/wordpress/groovy/category/technology/"
+                                        class="tag-link-5 tag-cloud-link"><svg>
+                                            <use xlink:href="#tag-decoration"></use>
+                                        </svg>Technology</a><a
+                                        href="https://themes.estudiopatagon.com/wordpress/groovy/category/travel/"
+                                        class="tag-link-6 tag-cloud-link"><svg>
+                                            <use xlink:href="#tag-decoration"></use>
+                                        </svg>Travel</a><a
+                                        href="https://themes.estudiopatagon.com/wordpress/groovy/category/video/"
+                                        class="tag-link-7 tag-cloud-link"><svg>
+                                            <use xlink:href="#tag-decoration"></use>
+                                        </svg>Video</a></div>
+                                <div class="clear"></div>
+                            </section>
+                        </div>
+                    </aside> <!-- end: #sidebar -->
                 </div> <!-- end: .content-wrapper -->
                 <div class="clear"></div>
             </div>
         </div> <!-- end: .grid-container -->
-    </div> <!-- end: .content-wrapper -->
+    </div><!-- end: .content-wrapper -->
 </main>

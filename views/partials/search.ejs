@@ -1,0 +1,28 @@
+<div class="clear"></div>
+<div class="hide-on-mobile hide-on-tablet hide-on-desktop">
+    <div id="search-lightbox" class="mfp-hide grid-container grid-small grid-parent">
+        <h4 class="title textcenter hide-on-mobile hide-on-tablet">Press <span>ESC</span> to close</h4>
+        <div class="search-wrapper section">
+            <form action="/search" method="Post" class="search-form">
+                <input type="text" name="searchTerm" id="searchTerm" value="" class="search-field"
+                    placeholder="Type to start your search..." aria-label="Type to start your search..." required>
+                <button type="submit" class="submit" aria-label="Submit"><svg class="icon main-color">
+                        <use xlink:href="#search-icon"></use>
+                    </svg></button>
+            </form>
+        </div>
+        <div class="categories">
+            <h5 class="textcenter">Or check our Popular Categories...</h5>
+            <div class="widget_tag_cloud">
+                <div class="tagcloud">
+                <% allTags.forEach(tag => { %>
+                    <a href="/category/<%= tag %>"
+                        class="tag-link-<%= Math.floor(Math.random() * 7) + 1 %>"><svg>
+                            <use xlink:href="#tag-decoration"></use>
+                        </svg><%= tag %></a>
+                <% }) %> 
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

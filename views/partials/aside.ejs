@@ -1,0 +1,90 @@
+<aside id="sidebar" class="grid-30 no-sidebar sticky-enabled">
+    <div class="sidebar-wrapper default-sidebar">
+        <section id="epcl_about-5" class="widget bg-box widget_epcl_about">
+            <h4 class="widget-title title medium bordered"><span class="bg">About Me</span><span
+                    class="border"></span></h4>
+            <div class="avatar"> <a href="https://themes.estudiopatagon.com/wordpress/groovy/author/admin/"
+                    class="shadow-effect thumb"><span class="fullimage cover"
+                        style="background-image: url(https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2023/01/avatar-1.jpg)"></span><span
+                        class="screen-reader-text">Jonathan Doe</span></a></div>
+            <div class="info">
+                <h4 class="title small underline-effect author-name no-margin"><a
+                        href="https://themes.estudiopatagon.com/wordpress/groovy/author/admin/">Jonathan
+                        Doe</a></h4>
+                <p class="founder">Founder &amp; Editor</p>
+                <div class="social"> <a href="https://twitter.com/wordpress"
+                        class="twitter tooltip tooltipstered" target="_blank"><i
+                            class="fa fa-twitter"></i><span class="screen-reader-text">Follow me on
+                            Twitter</span></a> <a href="http://www.facebook.com/estudiopatagon"
+                        class="facebook tooltip tooltipstered" target="_blank"><i
+                            class="fa fa-facebook"></i><span class="screen-reader-text">Follow me on
+                            Facebook</span></a> <a href="https://themes.estudiopatagon.com/wordpress/groovy"
+                        class="website tooltip tooltipstered" target="_blank"><i
+                            class="fa fa-globe"></i><span class="screen-reader-text">Website</span></a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <p>Hello! My name is Jonathan Doe working from Chile. I create some Ghost and Wordpress
+                themes for differents markets, also, i offer live support via our ticket system.</p>
+            <div class="clear"></div>
+        </section>
+        <section id="epcl_posts_thumbs-7" class="widget bg-box widget_epcl_posts_thumbs">
+            <h4 class="widget-title title medium bordered"><span class="bg">Recent Posts</span><span
+                    class="border"></span></h4>
+                    <% let postNumber = 1; %>
+                    <% latestPosts.slice(0, 4).forEach(post => { %>
+                        <article
+                            class="item primary-cat-5 post-80 post type-post status-publish format-standard has-post-thumbnail hentry category-technology">
+                            <a href="/article/<%= post._id %>"
+                                class="thumb main-effect epcl-loader loaded"> <span
+                                    class="screen-reader-text"><%= post.title %></span>
+                                    <span class="fullimage cover lazy loaded" style="background-image: url('<%= post.images %>');"></span>
+                                <span class="epcl-number"><%= postNumber %></span> </a>
+                            <div class="info">
+                                <div class="right">
+                                    <h4 class="title usmall underline-effect"><a
+                                            href="/article/<%= post._id %>"><%= post.title %></a></h4> <time datetime="2019-07-25"
+                                        class="icon"><%= new Date(post.createdAt).toLocaleDateString("en-US", { month: "long" ,
+                                        day: "numeric" , year: "numeric" , }) %></time>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </article>
+                        <% postNumber++; %>
+                    <% }); %>  
+            <div class="clear"></div>
+        </section>
+        <section id="epcl_social-6" class="widget bg-box widget_epcl_social">
+            <h4 class="widget-title title medium bordered"><span class="bg">Follow me!</span><span
+                    class="border"></span></h4>
+            <div class="icons"><a href="#" class="twitter" target="_blank" rel="nofollow noopener"><span
+                        class="icon twitter"><i class="fa fa-twitter"></i></span> <span
+                        class="name">Twitter</span></a><a href="#" class="facebook" target="_blank"
+                    rel="nofollow noopener"><span class="icon facebook"><i
+                            class="fa fa-facebook"></i></span> <span class="name">Facebook</span></a><a
+                    href="#" class="instagram" target="_blank" rel="nofollow noopener"><span
+                        class="icon instagram"><i class="fa fa-instagram"></i></span> <span
+                        class="name">Instagram</span></a><a href="http://estudiopatagon.com/feed"
+                    class="rss" target="_blank" rel="nofollow noopener"><span class="icon rss"><i
+                            class="fa fa-rss"></i></span> <span class="name">Rss</span></a></div>
+            <div class="clear"></div>
+        </section>
+        <section id="epcl_tag_cloud-7" class="widget bg-box widget_epcl_tag_cloud">
+            <h4 class="widget-title title medium bordered"><span class="bg">Tag Cloud</span><span
+                    class="border"></span></h4>
+            <div class="tagcloud ">
+                <% allTags.forEach(tag => { %>
+                    <a
+                    href="/category/<%= tag %>"
+                    class="tag-link-2 tag-cloud-link"><svg>
+                        <use xlink:href="#tag-decoration"></use>
+                    </svg><%= tag %></a>
+                <% }) %>                                
+                    </div>
+            <div class="clear"></div>
+        </section>
+    </div>
+</aside> <!-- end: #sidebar -->
+<div class="clear"></div>

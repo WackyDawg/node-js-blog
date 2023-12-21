@@ -1,0 +1,130 @@
+<main id="single" class="main grid-container classic epcl-vertical" data-post-id="829"> <!-- Fullcover Style -->
+    <!-- start: .center -->
+    <div class="content row"> <!-- start: .epcl-page-wrapper -->
+        <div class="epcl-page-wrapper"> <!-- start: .content -->
+            <div class="left-content grid-70 np-mobile">
+                <article
+                    class="main-article bg-box primary-cat-6 post-829 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle category-travel">
+                    <header>
+                        <div class="featured-image bg-box epcl-loader"> <img width="450" height="500"
+                                src="<%= data.images %>"
+                                class="attachment-epcl_vertical size-epcl_vertical wp-post-image" alt=""
+                                data-lazy="false" loading="eager" decoding="async" fetchpriority="high"></div>
+                        <div class="info epcl-flex"> <!-- start: .meta -->
+                            <div class="meta top">
+                                <div class="tags hide-on-mobile">
+                                    <% data.tags.forEach(tag => { %>
+                                        <a href="<%= '/tag/' + tag %>" class="tag-link-<%= tag %>">
+                                            <svg>
+                                                <use xlink:href="#tag-decoration"></use>
+                                            </svg><%= tag %>
+                                        </a>
+                                    <% }); %>
+                                </div>
+                                <time class="meta-info" datetime="2019-09-26">
+                                    <%= new Date(data.createdAt).toLocaleDateString("en-US", { month: "long" ,
+                                        day: "numeric" , year: "numeric" , }) %>
+                                </time>
+                                <!--<div class="min-read meta-info hide-on-desktop-sm"><span class="count">1</span> Min Read</div> -->
+                                <div class="min-read meta-info hide-on-desktop-sm">
+                                    <%= estimatedReadTime %> Min Read
+                                </div>
+                            </div> <!-- end: .meta -->
+                            <h1 class="main-title title bordered small-border-radius no-margin">The <%= data.title %>
+                            </h1> <!-- start: .meta -->
+                            <div class="meta epcl-flex">
+                                <div class="hide-on-desktop-sm"> <a
+                                        href="https://themes.estudiopatagon.com/wordpress/groovy/author/admin/"
+                                        title="Author: Jonathan Doe"
+                                        class="author meta-info hide-on-mobile hide-on-tablet hide-on-desktop-sm loaded">
+                                        <span class="author-image cover lazy loaded"
+                                            style="background-image: url(&quot;https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2023/01/avatar-1.jpg&quot;);"></span>
+                                        <span class="author-name">Jonathan Doe</span> </a></div>
+                                <div class="last-update" style="margin-bottom: 10px;"><strong>Last Update:</strong>
+                                    <%= new Date(data.updatedAt).toLocaleDateString("en-US", { month: "long" ,
+                                        day: "numeric" , year: "numeric" , }) %>
+                                </div>
+                                <div class="last-update" style="margin-bottom: 10px;"><strong>Views:</strong>
+                                    <%= views %>
+                                </div>
+                               
+                            </div> <!-- end: .meta -->
+                        </div>
+                        <div class="clear"></div>
+                    </header>
+                    <section class="post-content">
+                        <div class="epcl-share-container hide-on-mobile">
+                            <div class="inner-wrapper-sticky" style="position: relative;">
+                                <div class="epcl-share"> <a class="facebook " rel="nofollow noopener"
+                                        href="<%= 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(postUrl) %>"
+                                        target="_blank"><i class="fa fa-facebook"></i><span
+                                            class="screen-reader-text">Share on Facebook</span></a> <a class="twitter "
+                                        rel="nofollow noopener"
+                                        href="http://twitter.com/share?text=<%= encodeURIComponent(data.title) %>&url=<%= encodeURIComponent(postUrl) %>"
+                                        target="_blank"><i class="fa fa-twitter"></i><span
+                                            class="screen-reader-text">Share on Twitter</span></a> <a class="email "
+                                        rel="nofollow noopener"
+                                        href="mailto:?subject=<%= encodeURIComponent(data.title) %>body=<%= encodeURIComponent(postUrl) %>"
+                                        target="_blank"><i class="fa fa-envelope"></i><span
+                                            class="screen-reader-text">Share on Email</span></a> <a class="whatsapp "
+                                        rel="nofollow noopener" href="https://api.whatsapp.com/send?text=<%= encodeURIComponent(postUrl) %>
+                                        data-action=" share/whatsapp/share" target="_blank"><i
+                                            class="fa fa-whatsapp"></i><span class="screen-reader-text">Share on
+                                            WhatsApp</span></a></div>
+                            </div>
+                        </div>
+                        <div class="text">
+                         <%- data.insertMedia  %>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="bottom-tags textcenter">
+                            <p class="title usmall">Categorized in:</p>
+                            <div class="tags single-categories">
+                                <% allTags.forEach(tag => { %>
+                                    <a
+                                    href="/category/<%= tag %>"
+                                    class="tag-link-<%= Math.floor(Math.random() * 7) + 1 %>"><svg>
+                                        <use xlink:href="#tag-decoration"></use>
+                                    </svg><%= tag %></a>
+                                <% }) %> 
+                                
+                                
+                                </div>
+                        </div>
+                        <div class="epcl-subscribe">
+                            <div class="grid-container grid-usmall grid-parent np-mobile textcenter">
+                                <form class="subscribe-form"
+                                    action="https://estudiopatagon.us16.list-manage.com/subscribe?u=99eb5e3929c5a528d8b08961f&amp;id=2143723b69"
+                                    method="POST" target="_blank">
+                                    <h3 class="title medium subtitle">Like what you read?</h3>
+                                    <h4 class="title large">Subscribe to our Newsletter</h4>
+                                    <div class="form-group"> <input type="email" name="MERGE0"
+                                            class="inputbox rounded large" required=""
+                                            placeholder="Enter your email address"> <button
+                                            class="epcl-button submit absolute" type="submit">Submit</button>
+                                    </div> <span class="subscribe-decoration"></span> <input type="hidden"
+                                        id="subscribe_nonce" name="subscribe_nonce" value="0377da91fc"><input
+                                        type="hidden" name="_wp_http_referer"
+                                        value="/wordpress/groovy/the-spectacle-before-us-was-indeed-sublime/">
+                                </form>
+                                <p class="description">Subscribe to our email newsletter to get the <b>latest
+                                        posts</b> delivered <b>right to your email.</b></p>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                    <div class="epcl-category-overlay"></div>
+                </article>
+                <div class="clear"></div> <!-- start: .author -->
+                <%- include('./partials/about_author.ejs') %>
+                    <div class="clear"></div> <!-- start: .epcl-comments -->
+                    <%- include('./partials/comments.ejs') %>
+                        <%- include('./partials/related.ejs') %>
+                            <div class="clear"></div>
+                            <div class="clear"></div>
+            </div> <!-- end: .content --> <!-- start: #sidebar -->
+            <%- include('./partials/aside.ejs') %>
+        </div> <!-- end: .center -->
+    </div> <!-- end: .epcl-page-wrapper -->
+    <%- include('./partials/previous.ejs') %>
+</main> <!-- end: #single --> <!-- start: #footer -->

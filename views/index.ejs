@@ -1,0 +1,130 @@
+<!-- start: #header -->
+<main id="home" class="main"> <!-- start: .epcl-banner -->
+    <div class="epcl-banner textcenter section grid-container">
+        <div style="width: 728px;margin: 0 auto"> <a href="#" target="_blank" rel="nofollow"> <img
+                    src="https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2022/11/banner-728x90-3.png"
+                    class="custom-image" alt="Banner" style="display: none !important;"> </a></div>
+    </div> <!-- end: .epcl-banner -->
+    <div class="grid-container module-wrapper  enable-masonry" id="epcl-grid-sidebar-1">
+        <div class="epcl-row"> <!-- start: .content-wrapper -->
+            <div class="content-wrapper grid-sidebar content">
+                <div class="clearfix"> <!-- start: .left-content -->
+                    <div class="left-content grid-70"> <!-- start: .articles -->
+                        <div class="articles grid-posts grid-sidebar columns-2"
+                            style="position: relative; height: 3320.56px;">
+                            <div class="clear hide-on-tablet"></div>
+                            <div class="clear hide-on-desktop hide-on-mobile"></div>
+                            <% data.forEach(post=> { %>
+
+                                <article
+                                    class="default index-0 grid-50 primary-cat-<%= Math.floor(Math.random() * 7) + 1 %> tablet-grid-50 mobile-grid-100 np-mobile post-829 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle category-travel"
+                                    style="position: absolute; left: 0px; top: 0px;">
+                                    <div class="epcl-bg bg-box">
+                                        <header>
+                                            <div class="post-format-wrapper"> <!-- start: .post-format-image -->
+                                                <div class="post-format-image post-style-small-image">
+                                                    <!-- start: .featured-image -->
+                                                    <div class="featured-image epcl-flex">
+                                                        <!-- start: Classic module -->
+                                                        <!-- end: Classic module --> <!-- start: Grid module --> <a
+                                                            href="/article/<%= post._id %>"
+                                                            class="thumb fullwidth epcl-loader loaded"> <img
+                                                                class="post-image fullimage" alt="<%= post.title %>"
+                                                                src="<%= post.images %>" width="100%" height="380"> </a>
+                                                        <div class="info textleft">
+                                                            <h1 class="main-title title large inline shadow-effect"><a
+                                                                    href="/article/<%= post._id %>"><%= post.title %></a></h1>
+                                                        </div>
+                                                        <div class="tags">
+                                                            <% for (const tag of post.tags.slice(0, 1)) { %> <a
+                                                                href="/category/<%= tag %>"
+                                                                class="tag-link-6"><svg>
+                                                                    <use xlink:href="#tag-decoration"></use>
+                                                                </svg><%= tag %></a>
+                                                            <% } %>
+                                                            </div>
+                                                        <div class="meta absolute"> <a
+                                                                href=""
+                                                                class="comments meta-info icon mobile tooltip tooltipstered"
+                                                                aria-label="3 Comments"> <svg>
+                                                                    <use xlink:href="#comments-icon"></use>
+                                                                </svg> <span class="comment-count hidden">3</span> </a>
+                                                        </div> <!-- end: Grid module -->
+                                                    </div> <!-- end: .featured-image -->
+                                                    <div class="clear"></div>
+                                                </div> <!-- end: .post-format-image -->
+                                            </div> <!-- start: .meta -->
+                                            <div class="meta date"> <time class="meta-info"
+                                                    datetime="<%= new Date(post.createdAt).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) %>"><%= new Date(post.createdAt).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) %></time>
+                                                <!--<div class="min-read meta-info hide-on-desktop-sm"><span class="count">1</span> Min Read</div> -->
+                                                <div class="min-read meta-info hide-on-desktop-sm">1 Min Read</div>
+                                                <div class="clear"></div>
+                                            </div> <!-- end: .meta -->
+                                        </header>
+                                        
+                                        <% if (post && post.insertMedia) {
+                                            const filteredText = post.insertMedia.replace(/<[^>]*>|&nbsp;|&shy;/g, ''); // Remove HTML tags and entities
+                                            if (filteredText.length > 100) { %>
+                                                <div class="post-excerpt">
+                                                    <p>
+                                                        <%= filteredText.slice(0, 100) + '...' %>
+                                                    </p>
+                                                </div>
+                                            <% } else { %>
+                                                <div class="post-excerpt">
+                                                    <p>
+                                                        <%= filteredText %>
+                                                    </p>
+                                                </div>
+                                            <% }
+                                        } else { %>
+                                            <!-- Handle case where post or post.insertMedia is not defined -->
+                                        <% } %>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <footer class="bottom">
+                                            <div class="meta bottom"> <a
+                                                    href="https://themes.estudiopatagon.com/wordpress/groovy/author/admin/"
+                                                    title="Author: Jonathan Doe"
+                                                    class="author meta-info hide-on-mobile hide-on-tablet hide-on-desktop-sm loaded">
+                                                    <span class="author-image cover lazy loaded"
+                                                        style="background-image: url(&quot;https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2023/01/avatar-1.jpg&quot;);"></span>
+                                                    <span class="author-name">Jonathan Doe</span> </a> <a
+                                                    href="/article/<%= post._id %>"
+                                                    class="continue-reading epcl-button white">Continue Reading</a>
+                                                <div class="clear"></div>
+                                            </div>
+                                        </footer>
+                                        <div class="clear"></div>
+                                        <div class="epcl-category-overlay"></div>
+                                    </div>
+                                </article>
+                                <% }) %>
+
+                        </div> <!-- end: .articles -->
+                        <div class="separator last hide-on-tablet hide-on-mobile"></div>
+                        <div class="clear"></div> <!-- start: .epcl-pagination -->
+                        <div class="epcl-pagination section">
+                            <div class="nav">
+                            <span class="page-number"> Page <%= current %> of <%= totalPages %> </span>
+                            <% if (nextPage !==null) { %>
+                                <a href="/?page=<%= nextPage %>" class="epcl-button secondary small"
+                                    data-title="Next">Next</a>
+                                <% } %>
+                        </div>
+                        </div> <!-- end: .epcl-pagination -->
+                    </div> <!-- end: .left-content --> <!-- start: #sidebar -->
+                   <%- include('./partials/aside.ejs') %>
+                    <!-- end: #sidebar -->
+                </div>
+            </div> <!-- end: .content-wrapper -->
+        </div>
+    </div>
+</main>
+
+<!-- end: #home -->

@@ -1,0 +1,135 @@
+<main id="archives" class="main">
+    <div class="grid-container grid-medium">
+        <div class="tag-description section bg-box primary-cat-5">
+            <div class="left grid-35 tablet-grid-45 np-mobile"> <b>Category:</b>
+                <h1 class="title medium fw-bold no-margin ctag ctag-5"><svg>
+                        <use xlink:href="#tag-decoration"></use>
+                    </svg>
+                    <%= tag %>
+                </h1>
+                <div class="total">
+                    <%= totalPosts %> &nbsp;<span class="dot"></span> Articles
+                </div>
+                <div class="epcl-decoration-counter">4</div>
+            </div>
+            <div class="right grid-65 tablet-grid-55 np-tablet np-mobile">
+                <p>The simplest form of technology is the development and use of basic tools. The prehistoric discovery
+                    of how to control fire and the later Neolithic Revolution increased the available sources of food,
+                    and the invention of the wheel helped humans to travel in and control their environment.</p>
+            </div>
+            <div class="clear"></div>
+            <div class="epcl-category-overlay"></div>
+        </div>
+    </div> <!-- start: .grid-container -->
+    <div class="grid-container">
+        <div class="row module-wrapper "> <!-- start: .content-wrapper -->
+            <div class="content-wrapper classic classic-sidebar " id="epcl-classic-sidebar-1"> <!-- start: .center -->
+                <div class="center left-content grid-70"> <!-- start: .articles -->
+                    <div class="articles classic">
+                        <% relatedPosts.slice(0, 4).forEach(post=> { %>
+                            <article
+                                class="epcl-flex bg-box default classic-large grid-100 tablet-grid-100 index-0 post-style-small-image odd primary-cat-<%= Math.floor(Math.random() * 6) + 1 %> post-76 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle category-music category-technology tag-country tag-image">
+                                <div class="post-format-wrapper"> <!-- start: .post-format-image -->
+                                    <div class="post-format-image post-style-small-image">
+                                        <!-- start: .featured-image -->
+                                        <div class="featured-image epcl-flex"> <!-- start: Classic module -->
+                                            <!-- Loop: Small/Vertical Image Style --> <a href="/article/<%= post._id %>"
+                                                class="thumb main-effect medium-shadow epcl-loader loaded"> <img
+                                                    class="post-image fullimage" decoding="sync" alt="<%= post.title %>"
+                                                    src="https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2019/08/job252-nook-28-450x500.webp">
+                                            </a> <!-- Loop: Classic Image Style -->
+                                            <div class="meta absolute"> <a
+                                                    href="https://themes.estudiopatagon.com/wordpress/groovy/far-far-away-behind-the-word-mountains/#show-comments"
+                                                    class="comments meta-info icon mobile tooltip tooltipstered"
+                                                    aria-label="0 Comments"> <svg>
+                                                        <use xlink:href="#comments-icon"></use>
+                                                    </svg> <span class="comment-count hidden">0</span> </a></div>
+                                            <!-- end: Classic module --> <!-- start: Grid module -->
+                                            <!-- end: Grid module -->
+                                        </div> <!-- end: .featured-image -->
+                                        <div class="clear"></div>
+                                    </div> <!-- end: .post-format-image -->
+                                </div>
+                                <div class="info">
+                                    <header> <!-- start: .meta -->
+                                        <div class="meta-wrapper epcl-flex">
+                                            <div class="tags ">
+                                                <% for (const tag of post.tags.slice(0, 1)) { %>
+                                                    <a href="/category/<%= tag %>"
+                                                        class="tag-link-<%= Math.floor(Math.random() * 6) + 1 %>"><svg>
+                                                            <use xlink:href="#tag-decoration"></use>
+                                                        </svg>
+                                                        <%= tag %>
+                                                    </a>
+                                                    <% } %>
+                                            </div><!-- start: .meta -->
+                                            <div class="meta"> <time class="meta-info" datetime="<%= new Date(post.createdAt).toLocaleDateString('en-US', { month: 'long' ,
+                                            day: 'numeric' , year: 'numeric' }) %>">
+                                                    <%= new Date(post.createdAt).toLocaleDateString('en-US', {
+                                                        month: 'long' , day: 'numeric' , year: 'numeric' }) %>
+                                                </time>
+                                                <!--<div class="min-read meta-info hide-on-desktop-sm"><span class="count">2</span> Min Read</div> -->
+                                                <div class="min-read meta-info hide-on-desktop-sm">
+                                                    <%= estimatedReadTimes[index] %> Min Read
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div> <!-- end: .meta -->
+                                            <div class="clear"></div>
+                                        </div> <!-- end: .meta -->
+                                        <h1 class="main-title title large underline-effect"><a
+                                                href="/article/<%= post._id %>">
+                                                <%= post.title %>
+                                            </a></h1>
+                                    </header>
+                                    <div class="post-excerpt">
+                                        <p>
+                                            <% if (post && post.body && post.body.length> 50) { %>
+                                                <%= post.body.slice(0, 50) + '...' %>
+                                                    <% } else if (post && post.body) { %>
+                                                        <%= post.body %>
+                                                            <% } else { %>
+                                                                <!-- Handle the case when post or post.body is undefined or null -->
+                                                                <% } %>
+                                        </p>
+                                        <div class="clear"></div>
+                                    </div>
+
+
+                                    <footer class="bottom">
+                                        <div class="meta bottom"> <a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/far-far-away-behind-the-word-mountains/"
+                                                class="continue-reading epcl-button white active">Continue Reading <svg>
+                                                    <use xlink:href="#right-arrow"></use>
+                                                </svg></a> <a
+                                                href="https://themes.estudiopatagon.com/wordpress/groovy/author/admin/"
+                                                title="Author: Jonathan Doe"
+                                                class="author meta-info hide-on-mobile hide-on-tablet hide-on-desktop-sm loaded">
+                                                <span class="author-image cover lazy loaded"
+                                                    style="background-image: url(&quot;https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2023/01/avatar-1.jpg&quot;);"></span>
+                                                <span class="author-name">Jonathan Doe</span> </a></div>
+                                    </footer>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="epcl-category-overlay"></div>
+                            </article>
+                            <% }) %>
+                    </div> <!-- end: .articles -->
+                    <div class="separator last hide-on-tablet hide-on-mobile"></div>
+                    <div class="clear"></div> <!-- start: .epcl-pagination -->
+                    <div class="epcl-pagination section">
+                        <div class="nav">
+                            <span class="page-number"> Page <%= current %> of <%= totalPages %> </span>
+                            <% if (nextPage !==null) { %>
+                                <a href="/category/<%= tag %>?page=<%= nextPage %>" class="epcl-button secondary small"
+                                    data-title="Next">Next</a>
+                                <% } %>
+                        </div>
+                    </div> <!-- end: .epcl-pagination -->
+                </div> <!-- end: .center --> <!-- start: #sidebar -->
+                <%- include('./partials/aside.ejs') %>
+                    <!-- end: #sidebar -->
+            </div> <!-- end: .content-wrapper -->
+            <div class="clear"></div>
+        </div>
+    </div> <!-- end: .grid-container -->
+</main>

@@ -1,0 +1,101 @@
+<footer id="footer" class="">
+    <div class="widgets grid-container grid-large">
+        <div class="default-sidebar epcl-row hide-on-mobile">
+            <section id="text-2" class="widget widget_text grid-25 tablet-grid-50 mobile-grid-100">
+                <div class="textwidget">
+                    <p><img loading="lazy" decoding="async" class="alignnone size-medium wp-image-880"
+                            src="https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2022/11/logo-groovy-300x81.png"
+                            alt="" width="170" height="81" /></p>
+                    <p>A super modern theme following the latest trends with premium Membership and fully
+                        compatible with <b>Ghost</b>.</p>
+                    <p>Check more themes like this on <a href="https://estudiopatagon.com/" target="_blank"
+                            rel="noopener">estudiopatagon.com</a></p>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section id="epcl_posts_thumbs-6"
+                class="widget widget_epcl_posts_thumbs grid-25 tablet-grid-50 mobile-grid-100">
+                <h4 class="widget-title title medium bordered"><span class="bg">Recent Posts</span><span
+                        class="border"></span></h4>
+                <% let postNumber=1; %>
+                    <% latestPosts.slice(0, 3).forEach(post=> { %>
+                <article
+                    class="item primary-cat-2 post-144 post type-post status-publish format-standard has-post-thumbnail hentry category-health category-travel">
+                    <a href="/article/<%= post._id %>"
+                        class="thumb main-effect epcl-loader"> <span class="screen-reader-text">The meaning of
+                            health has evolved over time</span> <span class="fullimage cover lazy"
+                            data-src="<%= post.images %>"></span>
+                        <span class="epcl-number"><%= postNumber %></span> </a>
+                    <div class="info">
+                        <div class="right">
+                            <h4 class="title usmall underline-effect"><a
+                                    href="/article/<%= post._id %>"><%= post.title %></a></h4> <time datetime="<%= new Date(post.createdAt).toLocaleDateString("en-US", {
+                                        month: "long" , day: "numeric" , year: "numeric" , }) %>"
+                                class="icon"><%= new Date(post.createdAt).toLocaleDateString("en-US", {
+                                    month: "long" , day: "numeric" , year: "numeric" , }) %></time>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </article>
+                <% postNumber++; %>
+                 <% }); %>
+                <div class="clear"></div>
+            </section>
+            <section id="epcl_tag_cloud-6" class="widget widget_epcl_tag_cloud grid-25 tablet-grid-50 mobile-grid-100">
+                <h4 class="widget-title title medium bordered"><span class="bg">Tag Cloud</span><span
+                        class="border"></span></h4>
+                <div class="tagcloud ">
+                    <% allTags.forEach(tag => { %>
+                        <a
+                        href="/category/<%= tag %>"
+                        class="tag-link-<%= Math.floor(Math.random() * 7) + 1 %> tag-cloud-link"><svg>
+                            <use xlink:href="#tag-decoration"></use>
+                        </svg><%= tag %></a>
+                    <% }) %> 
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section id="epcl_social-8" class="widget widget_epcl_social grid-25 tablet-grid-50 mobile-grid-100">
+                <h4 class="widget-title title medium bordered"><span class="bg">Follow me!</span><span
+                        class="border"></span></h4>
+                <div class="icons"><a href="#" class="twitter" target="_blank" rel="nofollow noopener"><span
+                            class="icon twitter"><i class="fa fa-twitter"></i></span> <span
+                            class="name">Twitter</span></a><a href="#" class="facebook" target="_blank"
+                        rel="nofollow noopener"><span class="icon facebook"><i class="fa fa-facebook"></i></span> <span
+                            class="name">Facebook</span></a><a href="#" class="instagram" target="_blank"
+                        rel="nofollow noopener"><span class="icon instagram"><i class="fa fa-instagram"></i></span>
+                        <span class="name">Instagram</span></a><a href="http://estudiopatagon.com/feed" class="rss"
+                        target="_blank" rel="nofollow noopener"><span class="icon rss"><i class="fa fa-rss"></i></span>
+                        <span class="name">Rss</span></a></div>
+                <div class="clear"></div>
+            </section>
+        </div>
+        <div class="clear"></div>
+        <div class="clear"></div>
+    </div>
+    <div class="grid-container grid-large">
+        <div class="epcl-subscribe">
+            <div class="grid-container grid-usmall grid-parent np-mobile textcenter">
+                <form class="subscribe-form"
+                    action="https://estudiopatagon.us16.list-manage.com/subscribe?u=99eb5e3929c5a528d8b08961f&#038;id=2143723b69"
+                    method="POST" target="_blank">
+                    <h3 class="title medium subtitle">Like what you read?</h3>
+                    <h4 class="title large">Subscribe to our Newsletter</h4>
+                    <div class="form-group"> <input type="email" name="MERGE0" class="inputbox rounded large" required
+                            placeholder="Enter your email address"> <button class="epcl-button submit absolute"
+                            type="submit">Submit</button></div> <span class="subscribe-decoration"></span> <input
+                        type="hidden" id="subscribe_nonce" name="subscribe_nonce" value="0377da91fc" /><input
+                        type="hidden" name="_wp_http_referer" value="/wordpress/groovy/home-posts-slider/" />
+                </form>
+                <p class="description">Subscribe to our email newsletter to get the <b>latest posts</b>
+                    delivered <b>right to your email.</b></p>
+            </div>
+        </div>
+    </div>
+    <div class="epcl-theme-author published underline-effect no-margin-top"><a
+            href="/" target="_blank" title="Powered with Groovy">Groovy</a>
+    </div> <span id="back-to-top" class="epcl-button white"><i class="fa fa-angle-up"></i></span>
+    <div class="clear"></div>
+</footer> <!-- end: #footer -->
+<div class="clear"></div>

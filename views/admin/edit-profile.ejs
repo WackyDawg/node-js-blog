@@ -1,0 +1,76 @@
+<style>
+    input[type=file] {
+        width: 300px;
+        max-width: 100%;
+        color: #444;
+        padding: 5px;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #555;
+    }
+
+    input[type=file]::file-selector-button {
+        margin-right: 20px;
+        border: none;
+        background: #fffacd;
+        padding: 10px 20px;
+        border-radius: 8px;
+        color: #100f0f;
+        cursor: pointer;
+        transition: background .2s ease-in-out;
+    }
+
+    input[type=file]::file-selector-button:hover {
+        background: #fffacd;
+    }
+</style>
+<main id="page" class="main grid-container"> <!-- start: #single -->
+    <div id="single" class="content no-sidebar no-thumb"> <!-- start: .epcl-page-wrapper -->
+        <div class="epcl-page-wrapper clearfix row"> <!-- start: .left-content -->
+            <div class="left-content grid-70 np-mobile">
+                <article class="main-article bg-box post-43 page type-page status-publish hentry">
+                    <section class="post-content">
+                        <h1 class="title large bold absolute bordered small-border-radius">Edit Blog Post</h1>
+                        <div class="text">
+                            <p></p>
+                            <!-- <p class="has-text-align-center">Feel free to <strong>send a message</strong>, just fill the
+                                form belowand <strong>i will reply you shortly</strong>! 👍</p> -->
+                            <div class="wpcf7 js" id="wpcf7-f5-p43-o1" lang="en-US" dir="ltr">
+                                <div class="screen-reader-response">
+                                    <ul></ul>
+                                </div>
+                                <form action="/edit-post/<%= data._id %>?_method=PUT" method="POST" class="wpcf7-form init" 
+                                enctype="multipart/form-data">
+                
+                                    <p><label>Username<br> <span class="wpcf7-form-control-wrap"
+                                                data-name="your-name"><input size="40"
+                                                    aria-required="true"  value="<%= data.username %>" type="text"
+                                                    name="username"></span> </label></p>
+                                    <br>
+                                    <div>
+                                        <p><label><br> <span class="wpcf7-form-control-wrap"
+                                                    data-name="your-name">
+                                                    <input size="40"
+                                                        type="file" id="images" name="profile" multiple
+                                                        accept="image/*" value="<%= data.profile %>">
+                                                </span></label></p>
+                                    </div>
+                                    <br>
+                                    <div id="insertMedia">
+                                        <%- data.insertMedia %>
+                                    </div>
+                                    <br>
+                                    <p><input class="wpcf7-form-control has-spinner wpcf7-submit" type="submit"
+                                            value="Update">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                </article>
+            </div> <!-- end: .left-content --> <!-- start: #sidebar -->
+        </div> <!-- end: .epcl-page-wrapper -->
+    </div> <!-- end: #single -->
+</main>
+<script src="/assets/index.min.js"></script>
+<script src="/assets/richtexteditor.min.js"></script>

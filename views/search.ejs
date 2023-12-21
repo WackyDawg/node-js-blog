@@ -1,0 +1,101 @@
+<main id="archives" class="main">
+    <div class="section np-bottom grid-container grid-container grid-small">
+        <div class="epcl-search-box bg-box section">
+            <h1 class="title textcenter large">Search results for: <strong>"<%= searchTerm %>"</strong></h1>
+            <div class="textcenter">
+                <form action="/search" method="POST" class="search-form">
+                    <input type="text" name="searchTerm" id="searchTerm" value="<%= searchTerm %>"
+                        class="search-field" placeholder="Type to start your search..."
+                        aria-label="Type to start your search..." required=""> <button type="submit" class="submit"
+                        aria-label="Submit"><svg class="icon main-color">
+                            <use xlink:href="#search-icon"></use>
+                        </svg></button></form>
+            </div>
+        </div>
+    </div> <!-- start: .grid-container -->
+    <div class="grid-container">
+        <div class="row module-wrapper " id="epcl-classic-posts-1"> <!-- start: .content-wrapper -->
+            <div class="content-wrapper classic no-sidebar content"> <!-- start: .center -->
+                <div class="center left-content"> <!-- start: .articles -->
+                    <div class="articles classic">
+                    <% data.slice(0, 4).forEach(post=> { %>
+                        <article
+                            class="epcl-flex bg-box default classic-large grid-100 tablet-grid-100 index-0 post-style-small-image odd primary-cat-6 post-829 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle category-travel">
+                            <div class="post-format-wrapper"> <!-- start: .post-format-image -->
+                                <div class="post-format-image post-style-small-image"> <!-- start: .featured-image -->
+                                    <div class="featured-image epcl-flex"> <!-- start: Classic module -->
+                                        <!-- Loop: Small/Vertical Image Style --> <a
+                                            href="/article/<%= post._id %>"
+                                            class="thumb main-effect medium-shadow epcl-loader loaded"> <img
+                                                class="post-image fullimage" decoding="sync"
+                                                alt="The spectacle before us was indeed sublime"
+                                                src="https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2019/09/light-bulb-creative-business-idea-symbol-held-by-hand_53876-127176-1-7-450x500.webp">
+                                        </a> <!-- Loop: Classic Image Style -->
+                                        <div class="meta absolute"> <a
+                                                href="/article/<%= post._id %>"
+                                                class="comments meta-info icon mobile tooltip tooltipstered"
+                                                aria-label="3 Comments"> <svg>
+                                                    <use xlink:href="#comments-icon"></use>
+                                                </svg> <span class="comment-count hidden">3</span> </a></div>
+                                        <!-- end: Classic module --> <!-- start: Grid module -->
+                                        <!-- end: Grid module -->
+                                    </div> <!-- end: .featured-image -->
+                                    <div class="clear"></div>
+                                </div> <!-- end: .post-format-image -->
+                            </div>
+                            <div class="info">
+                                <header> <!-- start: .meta -->
+                                    <div class="meta-wrapper epcl-flex">
+                                        <div class="tags">  
+                                            <% for (const tag of post.tags.slice(0, 1)) { %>
+                                            <a
+                                                href="/?tags=<%= tag %>"
+                                                class="tag-link-<%= Math.floor(Math.random() * 7) + 1 %>"><svg>
+                                                    <use xlink:href="#tag-decoration"></use>
+                                                </svg><%= tag %></a>
+                                            <% } %></div> <!-- start: .meta -->
+                                        <div class="meta"> <time class="meta-info" datetime="<%= new Date(post.createdAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) %>"><%= new Date(post.createdAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) %></time>
+                                            <!--<div class="min-read meta-info hide-on-desktop-sm"><span class="count">1</span> Min Read</div> -->
+                                            <div class="min-read meta-info hide-on-desktop-sm">1 Min Read</div>
+                                            <div class="clear"></div>
+                                        </div> <!-- end: .meta -->
+                                        <div class="clear"></div>
+                                    </div> <!-- end: .meta -->
+                                    <h1 class="main-title title large underline-effect"><a
+                                            href="/article/<%= post._id %>"><%= post.title %></a></h1>
+                                </header>
+                                <div class="post-excerpt">
+                                    <p><%= post.body.length> 50 ? post.body.slice(0, 200) + '...' : post.body %></p>
+                                    <div class="clear"></div>
+                                </div>
+                                <footer class="bottom">
+                                    <div class="meta bottom"> <a
+                                            href="/article/<%= post._id %>"
+                                            class="continue-reading epcl-button white active">Continue Reading <svg>
+                                                <use xlink:href="#right-arrow"></use>
+                                            </svg></a> <a
+                                            href="https://themes.estudiopatagon.com/wordpress/groovy/author/admin/"
+                                            title="Author: Jonathan Doe"
+                                            class="author meta-info hide-on-mobile hide-on-tablet hide-on-desktop-sm loaded">
+                                            <span class="author-image cover lazy loaded"
+                                                style="background-image: url(&quot;https://themes.estudiopatagon.com/wordpress/groovy/wp-content/uploads/2023/01/avatar-1.jpg&quot;);"></span>
+                                            <span class="author-name">Jonathan Doe</span> </a></div>
+                                </footer>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="epcl-category-overlay"></div>
+                        </article>
+                    <% }) %>
+                    </div> <!-- end: .articles -->
+                    <div class="separator last hide-on-tablet hide-on-mobile"></div>
+                    <div class="clear"></div> <!-- start: .epcl-pagination -->
+                    <div class="epcl-pagination section">
+                        <div class="nav"> <span class="page-number"> Page 1 of 1 </span></div>
+                    </div> <!-- end: .epcl-pagination -->
+                </div> <!-- end: .center -->
+            </div> <!-- end: .content-wrapper -->
+            <div class="clear"></div>
+        </div>
+    </div> <!-- end: .grid-container -->
+    <div class="clear"></div>
+</main>
